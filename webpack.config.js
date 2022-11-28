@@ -31,6 +31,16 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.png/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        use: [
+          'html-loader',
+        ],
+      },
       // {
       //   test: /\.gif$/,
       //   type: 'asset/inline',
@@ -41,17 +51,17 @@ module.exports = {
       // },
     ],
   },
-  resolve: {
-    alias: {
-      config$: './configs/app-config.js',
-      react: './vendor/react-master',
-    },
-    extensions: ['.js', '.jsx'],
-    modules: [
-      'node_modules',
-      'bower_components',
-      'shared',
-      '/shared/vendor/modules',
-    ],
-  },
+  // resolve: {
+  //   alias: {
+  //     config$: './configs/app-config.js',
+  //     react: './vendor/react-master',
+  //   },
+  //   extensions: ['.js', '.jsx'],
+  //   modules: [
+  //     'node_modules',
+  //     'bower_components',
+  //     'shared',
+  //     '/shared/vendor/modules',
+  //   ],
+  // },
 };

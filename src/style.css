@@ -11,16 +11,30 @@
   --flex: flex;
   --inline: inline;
   --black: black;
+  --primary: goldenrod;
+  --secondary: white;
 }
 
 header {
   display: var(--flex);
   align-items: center;
-  justify-content: space-evenly;
-  padding: 2% 5%;
-  position: fixed;
-  width: 100%;
+  justify-content: space-between;
+  padding: 1% 10%;
   background: var(--black);
+  box-shadow: rgba(56, 61, 67, 0.9) 1px 18px 14px;
+}
+
+.logo {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo img {
+  background-color: var(--black);
+  width: 116px;
+  height: auto;
+  padding: 0;
+  align-self: flex-start;
 }
 
 .nav li {
@@ -28,4 +42,13 @@ header {
   padding: 2rem 3rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.nav li:hover {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.nav a {
+  color: var(--primary);
 }
