@@ -22,23 +22,23 @@ module.exports = {
   // },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: ['node_modules'],
-        use: ['babel-loader'],
-      },
+      // {
+      //   test: /\.jsx?$/,
+      //   exclude: ['node_modules'],
+      //   use: ['babel-loader'],
+      // },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      {
-        test: /\.gif$/,
-        type: 'asset/inline',
-      },
-      {
-        test: /\.(ttf|eot|svg)$/,
-        type: 'asset/resource',
-      },
+      // {
+      //   test: /\.gif$/,
+      //   type: 'asset/inline',
+      // },
+      // {
+      //   test: /\.(ttf|eot|svg)$/,
+      //   type: 'asset/resource',
+      // },
     ],
   },
   resolve: {
