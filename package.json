@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "leader-board",
-=======
   "name": "webpack-boilerplate",
->>>>>>> parent of 9c80e48 (Fix eslint error)
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
