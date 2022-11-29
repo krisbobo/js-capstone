@@ -1,11 +1,11 @@
 export default class Movies {
-    BASE_URL='https://jsonplaceholder.typicode.com/todos/1';
+    static BASE_URL ='https://api.tvmaze.com/seasons/1/episodes';
     constructor(){
 
     }
 
     static displayMovie= async() =>{
-        const response = await fetch('https://api.tvmaze.com/seasons/1/episodes');
+        const response = await fetch(this.BASE_URL);
         console.log(response);
         const movies = await response.json();
         console.log("Movies:", JSON.stringify(movies))
