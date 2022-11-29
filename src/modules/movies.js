@@ -5,7 +5,7 @@ export default class Movies {
     }
 
     static displayMovie= async() =>{
-        const response = await fetch('https://api.tvmaze.com/seasons/1/episodesn');
+        const response = await fetch('https://api.tvmaze.com/seasons/1/episodes');
         console.log(response);
         const movies = await response.json();
         console.log("Movies:", JSON.stringify(movies))
