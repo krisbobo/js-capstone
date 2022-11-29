@@ -4,7 +4,6 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-  color: goldenrod;
   transition: all 0.5s ease-out;
 }
 
@@ -13,7 +12,7 @@
   --inline: inline;
   --black: black;
   --primary: goldenrod;
-  --secondary: white;
+  --secondary: #c3c3c3;
 }
 
 header {
@@ -46,7 +45,7 @@ header {
 }
 
 .nav li:hover {
-  background-color: white;
+  background-color: var(--secondary);
   border-radius: 5px;
 }
 
