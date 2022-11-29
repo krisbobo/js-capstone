@@ -23,6 +23,7 @@ body {
 
 main {
   min-height: 80vh;
+  padding: 1% 5%;
 }
 
 header {
@@ -60,6 +61,59 @@ header {
 }
 
 .nav a {
+  color: var(--primary);
+}
+
+.card-container {
+  display: var(--flex);
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card {
+  padding: 1%;
+  width: 30%;
+  box-sizing: border-box;
+  background-color: var(--secondary);
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+}
+
+.movie-image img {
+  width: 100%;
+  height: auto;
+}
+
+.detail {
+  display: var(--flex);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail span {
+  font-size: 1.5rem;
+}
+
+.detail svg {
+  fill: var(--primary);
+}
+
+.btn {
+  background-color: var(--black);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+}
+
+.card h2 {
+  font-size: 2.7rem;
   color: var(--primary);
 }
 
