@@ -1,0 +1,1 @@
+export const cardContainer = document.querySelector('.card-container');
