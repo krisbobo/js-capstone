@@ -5,6 +5,7 @@
   list-style-type: none;
   text-decoration: none;
   transition: all 0.5s ease-out;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -138,6 +139,54 @@ header {
   color: var(--primary);
 }
 
+.pop {
+  background-color: var(--secondary);
+  margin: 5% auto;
+  height: 80%;
+  width: 100%;
+  top: 0;
+}
+
+.content {
+  padding: 2rem;
+  border: 1px solid #aaa;
+}
+
+.movie-type,
+.movie-details {
+  display: var(--flex);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.popup-body img {
+  width: max-content;
+  padding: 1rem;
+}
+
+.close {
+  float: right;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: var(--bg-color);
+  cursor: pointer;
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.runtime,
+.genre,
+.summary, 
+.airdate {
+  color: var(--primary);
+  font-size: 0.5rem;
+  padding: 1rem;
+}
+
 footer {
   display: var(--flex);
   background-color: var(--primary);
@@ -150,11 +199,12 @@ footer {
   width: 100%;
 }
 
-.brand a:hover {
-  color: var(--secondary);
-}
-
-p {
+.brand,
+.copy {
   color: var(--secondary);
   font-size: 1.5rem;
+}
+
+.brand a:hover {
+  color: var(--secondary);
 }
