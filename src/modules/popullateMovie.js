@@ -26,7 +26,6 @@ export const showMovies= async () => {
             <button class="btn">Comments</button>
             <button class="btn">Reservations</button>
             </div>`;
-        });
-          
+        });    
     })
 }
