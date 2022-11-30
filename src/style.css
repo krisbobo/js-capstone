@@ -111,6 +111,7 @@ header {
 
 .detail {
   display: var(--flex);
+  margin-top: 1em;
   justify-content: space-between;
   align-items: center;
   color: var(--primary);
@@ -122,6 +123,12 @@ header {
 
 .detail svg {
   fill: var(--primary);
+}
+
+.btn-container {
+  margin-top: 1em;
+  display: var(--flex);
+  justify-content: space-between;
 }
 
 .btn {
