@@ -2,6 +2,7 @@ import * as el from './domElements.js';
 import Movies from './movies.js';
 import Involve from './involvementApi.js';
 import {updateLikes} from './updateLikes';
+import {count} from './countItems';
 
 export const showMovies= async () => { 
 //This displays all movies from the movie API
@@ -28,6 +29,7 @@ Movies.displayMovie()
         <button class="btn like">Comments</button>
         <button class="btn">Reservations</button></di>
       </div>`;
+      count();
 
         document.querySelectorAll('.like').forEach((like) => {
             like.addEventListener('click', async (e) => {
@@ -35,6 +37,10 @@ Movies.displayMovie()
             await updateLikes(e.target.parentNode)
             
             });
+          });
+          
+        document.querySelectorAll('.card').forEach((card) => {
+            card.addEventListener('load',  count);
           });
     });    
   })
