@@ -22,11 +22,11 @@ export default class Involve {
         .catch(error => console.log('error', error));
   }
 
-//Space for Comment section 
 static displayLikes= async() =>{
     const response = await fetch(`${this.BASE_URL}/likes`);
     const likes = await response.json();   
-    // console.log(likes)
     return likes;
   }
+
+//Space for Comment section 
 }
