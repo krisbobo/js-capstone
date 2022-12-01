@@ -171,7 +171,6 @@ p {
   height: 100%;
   overflow: auto;
   background-color: var(--bg-color);
-  
 }
 
 .visible {
@@ -200,7 +199,7 @@ p {
 
 .popup-body {
   display: var(--flex);
-  max-height:20%;
+  max-height: 20%;
   padding: 1em;
   align-content: center;
   justify-content: space-between;
