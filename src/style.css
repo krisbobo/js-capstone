@@ -7,6 +7,7 @@
   transition: all 0.5s ease-out;
   font-family: 'Roboto', sans-serif;
 }
+
 :root {
   --flex: flex;
   --inline: inline;
@@ -15,18 +16,22 @@
   --secondary: rgb(26, 26, 26);
   --bg-color: #fff;
 }
+
 body {
   display: var(--flex);
   flex-direction: column;
   gap: 0.091rem;
   background-color: var(--bg-color);
 }
+
 main {
   min-height: 80vh;
   padding: 5% 15% 5%;
+
   /* background-color: var(--bg-color); */
   box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
+
 header {
   display: var(--flex);
   position: sticky;
@@ -36,48 +41,58 @@ header {
   background: var(--secondary);
   box-shadow: rgba(67, 67, 94, 0.25) 0 30px 60px -12px, rgba(42, 15, 15, 0.9) 0 181px 436px -1233333338px;
 }
+
 h2 {
   font-size: 1.7rem;
   font-weight: 500;
   color: var(--primary);
 }
+
 p {
   font-size: 1.2em;
   color: var(--black);
   text-align: justify;
 }
+
 .logo {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .logo img {
   width: 216px;
   height: auto;
   padding: 0;
   align-self: flex-start;
 }
+
 .nav li {
   display: var(--inline);
   padding: 2rem 3rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 .nav a {
   color: var(--primary);
 }
+
 .brand a {
   color: var(--secondary);
   font-size: 1.75rem;
 }
+
 .nav a:hover {
   color: var(--secondary);
   border-radius: 5px;
 }
+
 .nav .links:hover {
   background-color: var(--primary);
   color: var(--secondary);
   border-radius: 5px;
 }
+
 .card-container {
   display: var(--flex);
   flex-wrap: wrap;
@@ -85,6 +100,7 @@ p {
   justify-content: space-around;
   width: 100%;
 }
+
 .card {
   padding: 2%;
   width: 30%;
@@ -93,18 +109,22 @@ p {
   border-radius: 15px;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
 }
+
 .card:hover {
   cursor: pointer;
   background-color: var(--secondary);
 }
+
 .movie-image {
   width: 100%;
   height: auto;
 }
+
 .movie-image img {
   width: 100%;
   height: auto;
 }
+
 .detail {
   display: var(--flex);
   margin-top: 1em;
@@ -112,17 +132,21 @@ p {
   align-items: center;
   color: var(--primary);
 }
+
 .detail span {
   font-size: 1.5rem;
 }
+
 .detail svg {
   fill: var(--primary);
 }
+
 .btn-container {
   margin-top: 1em;
   display: var(--flex);
   justify-content: space-between;
 }
+
 .btn {
   background-color: var(--primary);
   cursor: pointer;
@@ -131,10 +155,12 @@ p {
   font-size: 1.25rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }
+
 .card h2 {
   font-size: 2.3rem;
   color: var(--primary);
 }
+
 .pop {
   visibility: hidden;
   position: fixed;
@@ -147,9 +173,11 @@ p {
   background-color: var(--bg-color);
   color: var(--primary);
 }
+
 .visible {
   visibility: visible;
 }
+
 .content {
   background-color: var(--secondary);
   margin: 5% auto;
@@ -162,12 +190,14 @@ p {
   align-content: center;
   gap: 2em;
 }
+
 .movie-type,
 .movie-details {
   display: var(--flex);
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .popup-body {
   display: var(--flex);
   max-height: 20%;
@@ -175,17 +205,21 @@ p {
   align-content: center;
   justify-content: space-between;
 }
+
 .pop p {
   color: var(--primary);
 }
+
 .poster {
   margin: 0 auto;
 }
+
 .poster img {
   width: auto;
   height: auto;
   padding: 1rem;
 }
+
 .close {
   float: right;
   border-radius: 50%;
@@ -199,6 +233,7 @@ p {
   font-size: 1.8rem;
   font-weight: 400;
 }
+
 .movie-type p,
 .runtime,
 .genre,
@@ -208,36 +243,43 @@ p {
   font-size: 1.2rem;
   padding: 1rem;
 }
+
 .comments-container {
   display: var(--flex);
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .container2 {
   display: var(--flex);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 #form {
   display: var(--flex);
   flex-direction: column;
   justify-content: flex-start;
 }
+
 #form input,
 #form textarea {
   margin: 1rem auto;
 }
+
 input[placeholder],
 textarea[placeholder] {
   padding: 0.2rem;
 }
+
 .form-btn {
   margin-top: 0.5rem;
   width: fit-content;
   padding: 0.5rem;
 }
+
 .count-c {
   cursor: none;
   display: var(--flex);
@@ -248,6 +290,7 @@ textarea[placeholder] {
   color: var(--primary);
   padding: 0.5em;
 }
+
 footer {
   display: var(--flex);
   background-color: var(--primary);
@@ -259,29 +302,35 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 .brand,
 .copy {
   color: var(--secondary);
   font-size: 1.5rem;
 }
+
 .brand a:hover {
   color: var(--secondary);
 }
+
 @media (min-width: 768px) {
   main {
     padding: 7% 5%;
   }
+
   .card-container {
     gap: 2em;
     justify-content: space-around;
     width: 100%;
     padding: 0;
   }
+
   .card {
     justify-content: space-around;
     padding: 1rem;
     gap: 1rem;
   }
+
   .btn {
     padding: 1em;
   }
