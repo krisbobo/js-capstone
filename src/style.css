@@ -171,6 +171,7 @@ p {
   height: 100%;
   overflow: auto;
   background-color: var(--bg-color);
+  color: var(--primary);
 }
 
 .visible {
@@ -180,7 +181,7 @@ p {
 .content {
   background-color: var(--secondary);
   margin: 5% auto;
-  padding: 20px;
+  padding: 4.5em;
   border: 1px solid var(--primary);
   width: 95%;
   display: var(--flex);
@@ -203,6 +204,10 @@ p {
   padding: 1em;
   align-content: center;
   justify-content: space-between;
+}
+
+.pop p {
+  color: var(--primary);
 }
 
 .poster {
@@ -237,6 +242,42 @@ p {
   color: var(--primary);
   font-size: 1.2rem;
   padding: 1rem;
+}
+
+.comments-container {
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container2 {
+  display: var(--flex);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: var(--flex);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#form input,
+#form textarea {
+  margin: 1rem auto;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  padding: 0.2rem;
+}
+
+.form-btn {
+  margin-top: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem;
 }
 
 .count-c {
