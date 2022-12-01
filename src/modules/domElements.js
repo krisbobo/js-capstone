@@ -9,3 +9,7 @@ export const logo = document.querySelector('.logo');
 
 export const count = document.querySelector('.count');
 
+export const name = document.querySelector('#username');
+export const insight = document.querySelector('#text');
+export const insightBtn = document.querySelector('.form-btn')
+

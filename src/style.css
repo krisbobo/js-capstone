@@ -239,6 +239,28 @@ p {
   padding: 1rem;
 }
 
+.container2,
+#form {
+  display: var(--flex);
+  flex-direction: column;
+}
+
+#form input,
+#form textarea {
+  margin: 1rem auto;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  padding: 0.2rem;
+}
+
+.form-btn {
+  margin-top: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem;
+}
+
 .count-c {
   cursor: none;
   display: var(--flex);

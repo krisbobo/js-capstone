@@ -1,3 +1,4 @@
+import { name, insight, insightBtn  } from './domElements';
 export default class Involve {
   static BASE_URL =`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${process.env.API_KEY}`;
 
@@ -52,5 +53,25 @@ static populateComments = async () => {
       `;
     });
   }
+
+static postComments = async () => {
+  const result = await fetch(this.BASE_URL,
+  {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: item_id,
+      username: name.value,
+      comment: insight.value,
+    }),
+  });
+  item_id = insightBtn.onClick();
+  name.value = '';
+  insight.value = '';
+  this.populateComments();
+  return result.json();
+};
 
 }

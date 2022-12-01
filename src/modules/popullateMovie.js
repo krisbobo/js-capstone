@@ -72,6 +72,15 @@ Movies.displayMovie()
                   <p class="runtime">Duration: ${res.runtime} mins</p>
                   <p class="airdate">Airing date: ${res.airdate}</p>
               </div>
+            </div>
+            <div>${Involve.populateComments()}</div>
+            <div class="container2">
+                <h2 class="form-title">Add a comment</h2>
+                <form id="form">
+                    <input type="text" id="username" placeholder="Your name" required>
+                    <textarea type="text" id="text" col="30" placeholder="Your insights" required></textarea>
+                    <button class="form-btn">Comment</button>
+                </form>
             </div>`;
             
             const closeBtn = document.querySelector('.close');
