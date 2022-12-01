@@ -26,7 +26,7 @@ Movies.displayMovie()
         </svg><b>${like.likes}</b> likes</span>
       </div>
       <div class="btn-container">
-        <button class="btn like">Comments</button>
+        <button onclick="popUp(${res.id})" class="btn like" id="${name}">Comments</button>
         <button class="btn">Reservations</button></di>
       </div>`;
       console.log( count(el.cardContainer,el.count));
@@ -45,4 +45,44 @@ Movies.displayMovie()
         //   });
     });    
   })
+  
+    window.popUp = async (id) => {
+      console.log(id)
+     const pop = document.querySelector('.pop');
+     pop.classList.add('visible');
+     await Movies.displayMovie()
+     .then((res) => {
+        res.forEach(res => {
+           if(res.id === id){
+             pop.innerHTML = `
+            <div class="content">
+              <div class="popup-body">
+                  <h2 class="name">${res.name}</h2>
+                  
+                  <span class="close">&times;</span>                   
+              </div>
+              <div class="poster">
+                  <img src="${res.image.original}" alt="${res.name}">
+              </div>
+              <div class="movie-type">
+                 ${res.summary}
+                
+              </div>
+              <div class="movie-details">
+                
+                  <p class="runtime">Duration: ${res.runtime} mins</p>
+                  <p class="airdate">Airing date: ${res.airdate}</p>
+              </div>
+            </div>`;
+            
+            const closeBtn = document.querySelector('.close');
+            closeBtn.addEventListener('click', () => {
+                window.location.reload();
+                pop.classList.remove('visible');
+            });
+           }
+           
+            })
+        });
+    }
 }
