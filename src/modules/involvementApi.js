@@ -28,8 +28,8 @@ static displayLikes = async() => {
   }
 
 //Space for Comment section 
-static comments = async () => {
-    const requestResponse = await fetch(`${this.BASE_URL}/comments`); 
+static getComments = async (id) => {
+    const requestResponse = await fetch(`${this.BASE_URL}/comments?item_id=${id}`); 
     const comments = await requestResponse.json();
     return comments;
   }
@@ -39,7 +39,7 @@ static populateComments = async () => {
     const cDay = currentDate.getDate();
     const cMonth = currentDate.getMonth() + 1;
     const cYear = currentDate.getFullYear();
-    await fetch(`${this.BASE_URL}/comments`).item.forEach((com) => {
+    await fetch(`${this.BASE_URL}/comments?item_id=${id}`).item.forEach((com) => {
       const incomingComments = document.createElement('div');
       incomingComments.classList.add('comment-section');
       incomingComments.innerHTML = `
