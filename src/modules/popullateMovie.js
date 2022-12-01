@@ -46,13 +46,13 @@ Movies.displayMovie()
   })
   
     window.popUp = async (id) => {
-      console.log(id)
      const pop = document.querySelector('.pop');
      pop.classList.add('visible');
      await Movies.displayMovie()
      .then((res) => {
         res.forEach(res => {
            if(res.id === id){
+            Involve.populateComments();
              pop.innerHTML = `
             <div class="content">
               <div class="popup-body">
