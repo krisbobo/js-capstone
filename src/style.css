@@ -39,6 +39,18 @@ header {
   box-shadow: rgba(67, 67, 94, 0.25) 0 30px 60px -12px, rgba(42, 15, 15, 0.9) 0 181px 436px -1233333338px;
 }
 
+h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+p {
+  font-size: 1.2em;
+  color: var(--black);
+  text-align: justify;
+}
+
 .logo {
   align-items: flex-start;
   justify-content: flex-start;
@@ -140,16 +152,33 @@ header {
 }
 
 .pop {
-  background-color: var(--secondary);
-  margin: 5% auto;
-  height: 80%;
-  width: 100%;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10;
+  left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--bg-color);
+  
+}
+
+.visible {
+  visibility: visible;
 }
 
 .content {
-  padding: 2rem;
-  border: 1px solid #aaa;
+  background-color: var(--secondary);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid var(--primary);
+  width: 95%;
+  display: var(--flex);
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 2em;
 }
 
 .movie-type,
@@ -159,8 +188,21 @@ header {
   flex-wrap: wrap;
 }
 
-.popup-body img {
-  width: max-content;
+.popup-body {
+  display: var(--flex);
+  max-height:20%;
+  padding: 1em;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.poster {
+  margin: 0 auto;
+}
+
+.poster img {
+  width: auto;
+  height: auto;
   padding: 1rem;
 }
 
@@ -178,12 +220,13 @@ header {
   font-weight: 400;
 }
 
+.movie-type p,
 .runtime,
 .genre,
 .summary,
 .airdate {
   color: var(--primary);
-  font-size: 0.5rem;
+  font-size: 1.2rem;
   padding: 1rem;
 }
 
