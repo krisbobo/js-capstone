@@ -9,3 +9,5 @@ export const logo = document.querySelector('.logo');
 
 export const count = document.querySelector('.count');
 
+export const tvShows = document.querySelector('.TV-shows');
+export const tvCardContainer = document.querySelector('.tv-card-container');

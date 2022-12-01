@@ -1,6 +1,7 @@
-import * as el from './domElements';
-
-export const count = () =>{
-    const i = el.count.innerHTML;
-    el.count.innerHTML= parseInt(i,10)+1;
+export const count = (cards,elCount) =>{
+    let i =elCount.innerHTML;
+    i= parseInt(i,10) + 1;
+    elCount.innerHTML= i;
+    console.log(cards)
+    return cards.childElementCount;
 }
