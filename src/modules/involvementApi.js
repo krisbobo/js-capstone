@@ -40,4 +40,34 @@ static getComments = async (id) => {
     return comments;
   }
 
+static postComment = async(item_id,username,comment) => {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+  const raw = JSON.stringify({
+    "item_id": item_id,
+    "username": username,
+    "comment": comment
+  });
+  
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+    fetch(`${this.BASE_URL}/comments`, requestOptions)
+      .then(response => response.text())
+      .then(result => {
+        if(result==='Created'){
+          return true;
+        }
+        else{
+          return false;
+        }
+      })
+      .catch(error => console.log('error', error));
 }
+}
+

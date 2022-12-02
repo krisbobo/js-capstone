@@ -33,7 +33,7 @@ Movies.displayMovie()
         </svg><b id=${like.likes}>${like.likes}</b> likes</span>
       </div>
       <div class="btn-container">
-        <button onclick="popUp(${res.id})" class="btn like" id="${name}">Comments</button>
+        <button onclick="popUp(${res.id},'${name}')" class="btn like" id="${name}">Comments</button>
         <button class="btn">Reservations</button></di>
       </div>`;
       count(el.cardContainer,el.count);
@@ -65,6 +65,7 @@ const comments = await Involve.getComments(name);
         commentList += `<div> <p>${com.creation_date}<span>${cDay}/ ${cMonth}/ ${cYear}</span></p>
         <p>${com.username}:</p>
         <p>${com.comment}</p></div>`; 
+        console.log(commentList)
         return commentList;
     });
 }
@@ -99,9 +100,13 @@ await Movies.displayMovie()
         <form id="form">
             <input type="text" id="username" placeholder="Your name" required>
             <textarea type="text" id="text" col="30" placeholder="Your insights" required></textarea>
-            <button class="form-btn">Comment</button>
+            <button id=${id} class="form-btn">Comment</button>
         </form>
         </div>`;
+        
+        //Call PostComment on form submission 
+        // postComment(id)
+        console.log( "Post Comment ",  Involve.postComment(name, "chris", "awesome film"));
         
         const closeBtn = document.querySelector('.close');
         closeBtn.addEventListener('click', () => {
