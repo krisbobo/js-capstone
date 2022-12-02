@@ -17,7 +17,14 @@ export default class Involve {
       // console.log(requestOptions)
       fetch(`${this.BASE_URL}/likes`, requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result => {
+          if(result==='Created'){
+            return true;
+          }
+          else{
+            return false;
+          }
+        })
         .catch(error => console.log('error', error));
   }
 static displayLikes = async() => {
