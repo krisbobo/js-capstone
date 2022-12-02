@@ -29,7 +29,7 @@ Movies.displayMovie()
         <button class="btn like">Comments</button>
         <button class="btn">Reservations</button></di>
       </div>`;
-      console.log( count(el.cardContainer,el.count));
+     
      
 
         document.querySelectorAll('.like').forEach((like) => {
