@@ -8,6 +8,7 @@ import popUp from './popup.js';
 export const showMovies=  () => { 
 //This displays all movies from the movie API
 Movies.displayMovie()
+
   .then((res) => {
     res.forEach(async (res) =>  {
       const name = res.name;
@@ -51,4 +52,5 @@ Movies.displayMovie()
   .catch ((err) => {
     console.log(err)    
   })
+
 }
