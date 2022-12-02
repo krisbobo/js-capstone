@@ -180,10 +180,10 @@ p {
 
 .content {
   background-color: var(--secondary);
-  margin: 5% auto;
+  margin: 15% auto;
   padding: 4.5em;
   border: 1px solid var(--primary);
-  width: 95%;
+  width: 65%;
   display: var(--flex);
   flex-direction: column;
   justify-content: center;
@@ -251,6 +251,24 @@ p {
   flex-direction: column;
 }
 
+.comments-container div {
+  flex-direction: row;
+  display: var(--flex);
+  gap: 2em;
+  padding: 1em 1.3em;
+  width: 100%;
+  align-items: center;
+}
+
+.comments-container div:nth-child(2n) {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.comments-container div:nth-child(2n) p {
+  color: var(--secondary);
+}
+
 .container2 {
   display: var(--flex);
   flex-direction: column;
@@ -262,11 +280,19 @@ p {
   display: var(--flex);
   flex-direction: column;
   justify-content: flex-start;
+  width: 40%;
 }
 
 #form input,
 #form textarea {
   margin: 1rem auto;
+  padding: 1em 2em;
+  width: 100%;
+}
+
+small {
+  font-size: 1.3em;
+  color: var(--bg-color);
 }
 
 input[placeholder],
