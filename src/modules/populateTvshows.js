@@ -29,11 +29,11 @@ TVShows.displayTvShow()
 			<button class="btn like">Comments</button>
 			<button class="btn">Reservations</button></di>
 		</div>`;
-		count(el.tvCardContainer,el.count);
+		count(el.tvCardContainer,el.tvCount);
 		document.querySelectorAll('.like').forEach((like) => {
 			like.addEventListener('click', async (e) => {
 				// call update function
-			//await updateLikes(e.target.parentNode)
+			await updateLikes(e.target.parentNode)
 			
 			});
 		});

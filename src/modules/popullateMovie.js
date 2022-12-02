@@ -29,7 +29,7 @@ Movies.displayMovie()
         <button onclick="popUp(${res.id})" class="btn like" id="${name}">Comments</button>
         <button class="btn">Reservations</button></di>
       </div>`;
-     
+      count(el.cardContainer,el.count);
      
 
         document.querySelectorAll('.like').forEach((like) => {

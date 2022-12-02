@@ -82,6 +82,16 @@ p {
   font-size: 1.5rem;
 }
 
+.active {
+  color: var(--secondary);
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+.active a {
+  color: var(--secondary);
+}
+
 .nav a:hover {
   color: var(--secondary);
   border-radius: 5px;
@@ -103,20 +113,16 @@ p {
 
 .tv-card-container {
   display: none;
-  position: absolute;
-  top: 15%;
+
+  /* position: absolute; */
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: space-around;
   width: 100%;
 }
 
 .hide {
   display: var(--flex);
-
-  /* visibility: hidden; */
-
-  /* opacity: 0; */
 }
 
 .show {
@@ -296,8 +302,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-  main {
-    padding: 7% 5%;
+  main,
+  .tv-card-container {
+    padding: 5%;
   }
 
   .card-container {
@@ -318,7 +325,7 @@ footer {
   }
 
   .hide {
-    display: var(--flex);
+    display: none;
     visibility: hidden;
     opacity: 0;
   }
