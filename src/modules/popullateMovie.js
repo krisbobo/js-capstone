@@ -101,10 +101,10 @@ Movies.displayMovie()
           <input type="text" id="username" placeholder="Your name" required>
           <textarea type="text" id="comment" col="30" placeholder="Your insights" required></textarea>
       
-          <button type='submit' id=${res.name} class="form-btn">Comment</button>
+          <button type='submit' id='${res.name}' class="form-btn">Comment</button>
       </form>
       </div>`;
-      
+      const commentContainer = document.querySelector('comments-container');
       document.querySelectorAll('.form-btn').forEach((formBtn) => {
         formBtn.addEventListener('click', async (e) =>{
           e.preventDefault;
@@ -113,9 +113,11 @@ Movies.displayMovie()
           const parent = formBtn.closest('form');
           const name = parent.children[0].value;
           const feedback = parent.children[1].value;
-          const small = parent.children[1];
+          const small = parent.children[2];
           if(name.trim()!=="" && feedback.trim()!==""){
             Involve.postComment(id, name, feedback);
+          
+            setInterval(()=> {parent.innerHTML="Thank you for your comment"},3000)
             small.innerHTML="Thanks for your comment";
             form.reset();
           }

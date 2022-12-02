@@ -277,7 +277,6 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .comments-container div {
@@ -294,9 +293,10 @@ p {
   color: var(--secondary);
 }
 
-.comments-container div:nth-child(2n) p{
+.comments-container div:nth-child(2n) p {
   color: var(--secondary);
 }
+
 .container2 {
   display: var(--flex);
   flex-direction: column;
@@ -308,7 +308,7 @@ p {
   display: var(--flex);
   flex-direction: column;
   justify-content: flex-start;
-  width:40%;
+  width: 40%;
 }
 
 #form input,
