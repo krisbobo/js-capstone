@@ -4,9 +4,16 @@ import Involve from './involvementApi.js';
 import {updateLikes} from './updateLikes';
 import {count} from './countItems';
 
+const pop = document.querySelector('.pop');
+const currentDate = new Date();
+const cDay = currentDate.getDate();
+const cMonth = currentDate.getMonth() + 1;
+const cYear = currentDate.getFullYear();
+
 export const showMovies= async () => { 
 //This displays all movies from the movie API
 Movies.displayMovie()
+
   .then((res) => {
     res.forEach(async (res) =>  {
       const name = res.name;
@@ -30,59 +37,74 @@ Movies.displayMovie()
         <button class="btn">Reservations</button></di>
       </div>`;
       count(el.cardContainer,el.count);
-     
-
-        document.querySelectorAll('.like').forEach((like) => {
-            like.addEventListener('click', async (e) => {
-              // call update function
-            await updateLikes(e.target.parentNode)
-            
-            });
-          });
-          
-        // document.querySelectorAll('.card').forEach((card) => {
-        //     card.addEventListener('load',  count);
-        //   });
-    });    
-  })
-  
-    window.popUp = async (id) => {
-      console.log(id)
-     const pop = document.querySelector('.pop');
-     pop.classList.add('visible');
-     await Movies.displayMovie()
-     .then((res) => {
-        res.forEach(res => {
-           if(res.id === id){
-             pop.innerHTML = `
-            <div class="content">
-              <div class="popup-body">
-                  <h2 class="name">${res.name}</h2>
-                  
-                  <span class="close">&times;</span>                   
-              </div>
-              <div class="poster">
-                  <img src="${res.image.original}" alt="${res.name}">
-              </div>
-              <div class="movie-type">
-                 ${res.summary}
-                
-              </div>
-              <div class="movie-details">
-                
-                  <p class="runtime">Duration: ${res.runtime} mins</p>
-                  <p class="airdate">Airing date: ${res.airdate}</p>
-              </div>
-            </div>`;
-            
-            const closeBtn = document.querySelector('.close');
-            closeBtn.addEventListener('click', () => {
-                window.location.reload();
-                pop.classList.remove('visible');
-            });
-           }
-           
-            })
+      
+    document.querySelectorAll('.like').forEach((like) => {
+        like.addEventListener('click', async (e) => {
+            // call update function
+        await updateLikes(e.target.parentNode)
         });
-    }
+      });
+        
+    document.querySelectorAll('.card').forEach((card) => {
+      card.addEventListener('load',  count);
+    });
+});    
+})
+}
+
+window.popUp = async (id,name) => {
+let commentList = "";
+const comments = await Involve.getComments(name);
+    if(comments.length > 0) {
+        comments.forEach((com) => {
+        commentList += `<div> <p>${com.creation_date}<span>${cDay}/ ${cMonth}/ ${cYear}</span></p>
+        <p>${com.username}:</p>
+        <p>${com.comment}</p></div>`; 
+        return commentList;
+    });
+}
+commentList = commentList ? commentList : "Be the first to comment";
+
+pop.classList.add('visible'); 
+
+
+await Movies.displayMovie()
+.then((res) => {
+    res.forEach(res => {
+        if(res.id === id){
+    
+        pop.innerHTML = `<div class="content">
+        <div class="popup-body">
+        <h2 class="name">${res.name}</h2>
+        <span class="close">&times;</span>
+        </div>
+        <div class="poster">
+        <img src="${res.image.original}" alt="${res.name}">
+        </div>
+        <div class="movie-type">
+            ${res.summary}
+        </div>
+        <div class="movie-details">
+            <p class="runtime">Duration: ${res.runtime} mins</p>
+            <p class="airdate">Airing date: ${res.airdate}</p>
+        </div>
+        <div class="comments-container">  ${commentList} </div>
+        <div class="container2">
+        <h2 class="form-title">Add a comment</h2>
+        <form id="form">
+            <input type="text" id="username" placeholder="Your name" required>
+            <textarea type="text" id="text" col="30" placeholder="Your insights" required></textarea>
+            <button class="form-btn">Comment</button>
+        </form>
+        </div>`;
+        
+        const closeBtn = document.querySelector('.close');
+        closeBtn.addEventListener('click', () => {
+            window.location.reload();
+            pop.classList.remove('visible');
+        });
+        }
+        
+        })
+    });
 }
