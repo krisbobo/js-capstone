@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  height: min-content;
+  min-height: 80vh;
   padding: 5% 15% 5%;
 
   /* background-color: var(--bg-color); */
@@ -68,28 +68,18 @@ p {
 
 .nav li {
   display: var(--inline);
-  padding: 2rem 2rem;
-  font-size: 1.45rem;
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .nav a {
-  color: var(--bg-color);
+  color: var(--primary);
 }
 
 .brand a {
   color: var(--secondary);
-  font-size: 1.5rem;
-}
-
-.active {
-  color: var(--secondary);
-  background-color: var(--primary);
-  border-radius: 5px;
-}
-
-.active a {
-  color: var(--secondary);
+  font-size: 1.75rem;
 }
 
 .nav a:hover {
@@ -106,27 +96,9 @@ p {
 .card-container {
   display: var(--flex);
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 3rem;
   justify-content: space-around;
   width: 100%;
-}
-
-.tv-card-container {
-  display: none;
-
-  /* position: absolute; */
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.hide {
-  display: var(--flex);
-}
-
-.show {
-  display: var(--flex);
 }
 
 .card {
@@ -179,13 +151,13 @@ p {
   background-color: var(--primary);
   cursor: pointer;
   color: var(--secondary);
-  padding: 0.65em 1em;
+  padding: 1rem 2rem;
   font-size: 1.25rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }
 
 .card h2 {
-  font-size: 1.75em;
+  font-size: 2.3rem;
   color: var(--primary);
 }
 
@@ -339,13 +311,11 @@ footer {
 
 .brand a:hover {
   color: var(--secondary);
-  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  main,
-  .tv-card-container {
-    padding: 5%;
+  main {
+    padding: 7% 5%;
   }
 
   .card-container {
@@ -362,16 +332,6 @@ footer {
   }
 
   .btn {
-    padding: 0.65em 1em;
-  }
-
-  .hide {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .show {
-    display: var(--flex);
+    padding: 1em;
   }
 }
