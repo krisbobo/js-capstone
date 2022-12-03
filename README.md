@@ -38,7 +38,11 @@
 > Describe the project
 
 ## 🛠 Built With <a name="built-with"></a>
-
+- HTML
+- CSS
+- JS
+- Jest
+- Webpack
 <!-- Features -->
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -51,19 +55,6 @@
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
 
 <!-- Features -->
 
@@ -85,89 +76,79 @@
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
+- [Kanban Board Link](https://github.com/krisbobo/js-capstone/projects/1)
+
 <p align="right">[<a href="#readme-top">Back to Top</a>]</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> In order to run this project you need:
 
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- Node js installed on your computer
+- Npm Node package manager
+- Terminal
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
+> https://github.com/krisbobo/js-capstone.git
 ### Install
 
 Install this project with:
+```sh
+ npm install
+```
 
-<!--
 Example command:
 
 ```sh
   cd my-project
   gem install
 ```
---->
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  rails server
+ npm run test
 ```
---->
+-
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+ npm test
 ```
---->
+-
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
+
 Example:
 
 ```sh
-
+npm run deploy
 ```
- -->
+
+### Pull Requests
+
+- Proudly reviewed by [Kibrewossen](https://github.com/krisbobo/js-capstone/pull/27) 
+- Proudly reviewed by [Kiyong](https://github.com/krisbobo/js-capstone/pull/22) 
 
 <p align="right">[<a href="#readme-top">Back to Top</a>]</p>
 
