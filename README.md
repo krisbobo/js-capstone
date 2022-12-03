@@ -16,14 +16,12 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Live Demo and other links ](#-live-demo-and-other-links-)
   - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -35,9 +33,12 @@
 
 # 📖 [Micro Cinema] <a name="about-project"></a>
 
-> Describe the project
+> Micro Cinema is a Single Page Application(SPA) based on an external API [tvmaze](https://www.tvmaze.com/api). The API provides data on movies, including TV shows and various other movies and series. The web app is composed of two interfaces, the home page and the comments popup window that shows more data about a particular item. The API allows us to get a list of items with a unique id(or generate it), and for a given item, get detailed information about it. We used Microverse's Involvement API to record user interactions(likes and comments).
 
 ## 🛠 Built With <a name="built-with"></a>
+
+The major tools and languages used are:
+
 - HTML
 - CSS
 - JS
@@ -46,12 +47,12 @@
 <!-- Features -->
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> The following tech stack were used
 
 <details>
-  <summary>Client</summary>
+  <summary>Base API</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.tvmaze.com/api">tvmazeapi</a></li>
   </ul>
 </details>
 
@@ -60,23 +61,28 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> The web app has the following key features:
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Home Page]**
+- **[Popup Window]**
 
 <p align="right">[<a href="#readme-top">Back to Top</a>]</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo and other links <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> Here, we will paste links as per the submission instructions.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://krisbobo.github.io/js-capstone/)
+
+- Check the Authors section of this README for an overview of the authors.
 
 - [Kanban Board Link](https://github.com/krisbobo/js-capstone/projects/1)
+
+- [Christian's Code Review Link](https://github.com/krisbobo/js-capstone/pull/22)
+
+- [Kibrewossen's Code Review Link](https://github.com/krisbobo/js-capstone/pull/27)
 
 <p align="right">[<a href="#readme-top">Back to Top</a>]</p>
 
@@ -95,18 +101,14 @@
 Clone this repository to your desired folder:
 
 > https://github.com/krisbobo/js-capstone.git
+
 ### Install
 
 Install this project with:
-```sh
- npm install
-```
-
-Example command:
 
 ```sh
   cd my-project
-  gem install
+  npm install or npm i
 ```
 -
 
@@ -114,41 +116,17 @@ Example command:
 
 To run the project, execute the following command:
 
-
-Example command:
-
 ```sh
- npm run test
+ npm run build
 ```
--
 
 ### Run tests
 
 To run tests, run the following command:
 
-
-Example command:
-
 ```sh
- npm test
+ npm test or jest test
 ```
--
-
-### Deployment
-
-You can deploy this project using:
-
-
-Example:
-
-```sh
-npm run deploy
-```
-
-### Pull Requests
-
-- Proudly reviewed by [Kibrewossen](https://github.com/krisbobo/js-capstone/pull/27) 
-- Proudly reviewed by [Kiyong](https://github.com/krisbobo/js-capstone/pull/22) 
 
 <p align="right">[<a href="#readme-top">Back to Top</a>]</p>
 
